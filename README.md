@@ -1,49 +1,46 @@
 # Shortlist Discord Bot (Python)
 
-Modularer Discord-Bot (discord.py) mit Moderation, Logging, Welcome-Automation und Level/XP-System.
-Projekt erstellt als Portfolio für Bewerbungen (saubere Struktur, Async, SQLite-Persistenz, Slash-Commands).
-
-## Features
-- Slash Commands: `/ping`, `/say`, `/warn`, `/warnings`, `/mute`, `/unmute`, `/rank`, `/leaderboard`
-- Moderation: Warnsystem (SQLite) + Timeouts
-- Logging in einen separaten Channel
-- Welcome Message bei Server-Join
-- Level/XP System mit Cooldown gegen Spam
-
-## Tech Stack
-- Python 3.12
-- discord.py
-- SQLite (aiosqlite)
-- python-dotenv
-
-## Setup
-1. `python -m venv .venv`  
-2. `source .venv/bin/activate`
-3. `pip install -r requirements.txt`
-4. `.env` anlegen (siehe `.env.example`)
-5. `python bot.py`
-
-## Screenshots (optional, empfohlen)
-- /ping
-- Warnsystem
-- /rank + leaderboard
-- Welcome Message
-# Shortlist Discord Bot (Python)
-
-Ein modular aufgebauter Discord-Bot mit Moderationssystem, Logging, Welcome-Automation und Level-System.
+Ein modular entwickelter Discord-Bot auf Basis von `discord.py`.  
+Das Projekt demonstriert Kenntnisse in API-Integration, asynchroner Programmierung (async/await), Datenpersistenz (SQLite) sowie strukturierter Softwareorganisation.
 
 ## Funktionen
-- Slash Commands (/ping, /rank, /leaderboard)
-- Moderationssystem (Warnungen + Timeouts)
-- Welcome-Nachricht bei neuen Mitgliedern
-- Level- und XP-System mit Cooldown
-- Persistente Speicherung mit SQLite
+
+### Moderation
+- Verwarnsystem mit Datenbankspeicherung (SQLite)
+- Anzeigen aller Verwarnungen eines Nutzers
+- Timeout (Mute) und Unmute Befehle
+- Moderations-Logging in separatem Kanal
+
+### Community Features
+- Automatische Willkommensnachricht bei neuen Mitgliedern
+- Level- und XP-System mit Cooldown gegen Spam
+- Leaderboard der aktivsten Nutzer
+
+### Slash-Commands
+`/ping` – Bot Status prüfen  
+`/warn` – Nutzer verwarnen  
+`/warnings` – Verwarnungen anzeigen  
+`/mute` – Nutzer temporär stummschalten  
+`/unmute` – Stummschaltung aufheben  
+`/rank` – Eigenes Level anzeigen  
+`/leaderboard` – Rangliste anzeigen  
+`/say` – Admin-Ankündigung
+
+---
 
 ## Technologien
-- Python 3
-- discord.py
-- SQLite (aiosqlite)
-- Async Programming (async/await)
+- Python 3.12
+- discord.py (Discord API Wrapper)
+- SQLite mit aiosqlite
+- python-dotenv (Konfigurationsmanagement)
+- Asynchrone Programmierung (async/await)
 
-## Ziel
-Das Projekt dient als Portfolio-Projekt, um Kenntnisse in API-Integration, Event-Handling, Datenpersistenz und Softwarestruktur zu demonstrieren.
+---
+
+## Installation
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+
